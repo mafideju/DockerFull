@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.links .links:active.links:checked.links:focus.links:hover.links:link.links:visited {
+  color: rgb(238, 238, 225)!important;
+}
