@@ -29,19 +29,17 @@ jobs:
     - name: Criando Imagem Docker
       run: docker build . --file ./client/Dockerfile --tag docker-full-101:$(date +%s)
 
-
-      # DOCKER HUB SESSION
     - name: Buildando Imagem para o DockerHub - Build Client
-      run: docker build -t mafideju/docker-full-client -f ./client/Dockerfile.dev ./client
+      run: docker build -t mafideju/docker-full-client ./client
 
     - name: Buildando Imagem para o DockerHub - Build Nginx
-      run: docker build -t mafideju/docker-full-nginx -f ./nginx/Dockerfile.dev ./nginx
+      run: docker build -t mafideju/docker-full-nginx ./nginx
 
     - name: Buildando Imagem para o DockerHub - Build Worker
-      run: docker build -t mafideju/docker-full-worker -f ./worker/Dockerfile.dev ./worker
+      run: docker build -t mafideju/docker-full-worker ./worker
 
     - name: Buildando Imagem para o DockerHub - Build Server
-      run: docker build -t mafideju/docker-full-server -f ./server/Dockerfile.dev ./server
+      run: docker build -t mafideju/docker-full-server ./server
 
     - name: Subindo Imagem para o DockerHub - Client
       run: docker push mafideju/docker-full-client
