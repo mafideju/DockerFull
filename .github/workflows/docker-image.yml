@@ -32,7 +32,7 @@ jobs:
 
 
     - name: Buildando Imagem para o DockerHub - Build Client
-      run: docker build -t mafideju/docker-full-101 -f ./client/Dockerfile.dev ./client
+      run: docker build -t mafideju/docker-full-client -f ./client/Dockerfile.dev ./client
 
     - name: Subindo Imagem para o DockerHub - Client
       run: docker push mafideju/docker-full-client
