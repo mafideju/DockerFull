@@ -20,7 +20,7 @@ jobs:
     - name: Logando no Sistema
       run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
 
-    - name: Buildando o Projeto
+    - name: Buildando o Projeto Client
       run: docker build -t mafideju/docker-full-101 -f ./client/Dockerfile.dev ./client
     
     - name: Rodando o Build
@@ -36,7 +36,7 @@ jobs:
     #     aws_secret_key: ${{ secrets.AWS_SECRET_KEY }}
     #     application_name: docker-full-101
     #     environment_name: Dockerfull101-env
-    #     existing_bucket_name: elasticbeanstalk-us-east-1-788553702873
+    #     existing_bucket_name: INSERIR APÓS PRIMEIRO DEPLOY
     #     region: us-east-1
     #     version_label: ${{ github.sha }}
     #     deployment_package: deploy.zip
